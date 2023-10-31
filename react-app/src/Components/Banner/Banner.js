@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Banner.css"
 import axios from '../../axios'
-import {api_key, background_image_url} from '../../Constants/Constans'
+import {api_key, image_url} from '../../Constants/Constans'
 
 function Banner() {
    
@@ -16,7 +16,7 @@ function Banner() {
 
   return (
     <div 
-    style={{backgroundImage:`url(${movie ? background_image_url+movie.backdrop_path : ""})`}}
+    style={{backgroundImage:`url(${movie ? image_url+movie.backdrop_path : ""})`}}
     className='banner'>
       <div className='content'>
         <h1 className='title'>{movie ? movie.title : ""}</h1>
